@@ -13,6 +13,66 @@ const navItems = [
   { name: 'Contact', href: '/contact' },
 ]
 
+const themes = ['light', 'dark', 'colorful'] as const
+type Theme = typeof themes[number]
+
+function ThemeToggle() {
+  const [currentTheme, setCurrentTheme] = useState<Theme>('light')
+
+  useEffect(() => {
+    const saved = localStorage.getItem('pref-theme-v2') as Theme
+    if (saved && themes.includes(saved)) {
+      setCurrentTheme(saved)
+    } else {
+      setCurrentTheme('light')
+    }
+  }, [])
+
+  const switchTheme = () => {
+    const currentIndex = themes.indexOf(currentTheme)
+    const nextIndex = (currentIndex + 1) % themes.length
+    const nextTheme = themes[nextIndex]
+    
+    setCurrentTheme(nextTheme)
+    document.documentElement.dataset.theme = nextTheme
+    localStorage.setItem('pref-theme-v2', nextTheme)
+  }
+
+  return (
+    <div className="hidden md:block mr-6">
+      <button
+        onClick={switchTheme}
+        className="relative overflow-hidden bg-gradient-to-r from-purple-500 via-pink-500 to-blue-500 p-0.5 rounded-full transition-all duration-300 hover:scale-105"
+        aria-label={`Current theme: ${currentTheme}. Click to switch themes.`}
+      >
+        <div className="relative bg-black/80 backdrop-blur-sm rounded-full px-6 py-2 flex items-center gap-2">
+          {/* Animated indicator */}
+          <div 
+            className="absolute left-1 top-1 bottom-1 w-8 bg-gradient-to-r from-pink-500 to-purple-500 rounded-full transition-transform duration-500 ease-out"
+            style={{
+              transform: `translateX(${themes.indexOf(currentTheme) * 24}px)`
+            }}
+          />
+          
+          {/* Theme labels */}
+          <div className="relative z-10 flex items-center gap-6 text-xs font-medium">
+            {themes.map((theme) => (
+              <span
+                key={theme}
+                className={`transition-colors duration-300 capitalize ${
+                  currentTheme === theme ? 'text-white' : 'text-gray-400'
+                }`}
+              >
+                {theme}
+              </span>
+            ))}
+          </div>
+        </div>
+      </button>
+    </div>
+  )
+}
+
 export default function Navigation() {
   const [isOpen, setIsOpen] = useState(false)
   const [scrolled, setScrolled] = useState(false)
@@ -38,22 +98,7 @@ export default function Navigation() {
           </Link>
 
           {/* Theme Switcher */}
-    <form className="hidden md:flex gap-2 items-center mr-6" aria-label="Theme selector">
-            {['dark','soothing','light','minimalist','colorful'].map(t => (
-              <label key={t} className="text-xs text-alt cursor-pointer flex items-center gap-1">
-                <input
-                  type="radio"
-                  name="theme"
-                  value={t}
-      defaultChecked={t==='dark'}
-                  onChange={(e)=>{document.documentElement.dataset.theme=e.target.value;localStorage.setItem('pref-theme-v2',e.target.value);}}
-                  className="accent-pink-500"
-                  aria-label={`Switch to ${t} theme`}
-                />
-                {t}
-              </label>
-            ))}
-          </form>
+          <ThemeToggle />
 
           {/* Desktop Navigation */}
           <div className="hidden md:block">

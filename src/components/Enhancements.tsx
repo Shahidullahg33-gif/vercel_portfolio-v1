@@ -51,10 +51,9 @@ export default function Enhancements(){
       reveals.forEach(r => r.classList.add('is-in'))
     }
 
-    // Tilt cards (disabled for minimalist theme or reduced-motion)
+    // Tilt cards (disabled for reduced-motion)
     const root = document.documentElement
-  const isMinimalist = root.dataset.theme === 'minimalist'
-    if (!isMinimalist && !root.classList.contains('reduced-motion') && matchMedia('(pointer:fine)').matches){
+    if (!root.classList.contains('reduced-motion') && matchMedia('(pointer:fine)').matches){
       const cards = document.querySelectorAll<HTMLElement>('.tilt')
       const max = 8
       cards.forEach(card => {
