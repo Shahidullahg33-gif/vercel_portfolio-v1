@@ -40,7 +40,7 @@ export default function Navigation() {
           {/* Theme Switcher */}
     <form className="hidden md:flex gap-2 items-center mr-6" aria-label="Theme selector">
             {['dark','soothing','light','minimalist','colorful'].map(t => (
-              <label key={t} className="text-xs text-gray-300 cursor-pointer flex items-center gap-1">
+              <label key={t} className="text-xs text-alt cursor-pointer flex items-center gap-1">
                 <input
                   type="radio"
                   name="theme"

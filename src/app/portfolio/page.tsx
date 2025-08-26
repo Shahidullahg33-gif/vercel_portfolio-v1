@@ -13,7 +13,7 @@ export default function PortfolioPage(){
         {caseStudies.map(cs => (
           <article key={cs.slug} className="card-hover p-6 rounded-lg tilt">
             <h2 className="text-2xl font-semibold mb-3">{cs.title}</h2>
-            <p className="text-gray-300 mb-4 max-w-prose">{cs.excerpt}</p>
+            <p className="text-alt mb-4 max-w-prose">{cs.excerpt}</p>
             <ul className="text-xs text-gray-400 mb-4 space-y-1">
               {cs.impact.map(i=> <li key={i}>• {i}</li>)}
             </ul>

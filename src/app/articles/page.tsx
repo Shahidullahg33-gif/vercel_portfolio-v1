@@ -32,7 +32,7 @@ export default function ArticlesPage() {
           aria-label="Search articles"
         />
         {activeTags.length>0 && (
-          <button onClick={()=>setActiveTags([])} className="text-xs text-gray-300 underline ml-auto">Clear filters</button>
+          <button onClick={()=>setActiveTags([])} className="text-xs text-alt underline ml-auto">Clear filters</button>
         )}
       </div>
       <div className="flex flex-wrap gap-2 mb-10" aria-label="Filter by tag">
@@ -42,7 +42,7 @@ export default function ArticlesPage() {
             <button
               key={t}
               onClick={()=>toggleTag(t)}
-              className={`text-xs px-3 py-1 rounded-full border backdrop-blur transition-colors ${on? 'bg-[var(--c-accent)] text-white border-[var(--c-accent)]':'bg-white/5 border-white/15 text-gray-300 hover:bg-white/10'}`}
+              className={`text-xs px-3 py-1 rounded-full border backdrop-blur transition-colors ${on? 'bg-[var(--c-accent)] text-white border-[var(--c-accent)]':'bg-white/5 border-white/15 text-alt hover:bg-white/10'}`}
               aria-pressed={on}
             >{t}</button>
           )
@@ -53,7 +53,7 @@ export default function ArticlesPage() {
         {filtered.map(a => (
           <li key={a.slug} className="card-hover p-6 rounded-lg reveal">
             <h2 className="text-2xl font-semibold mb-2"><Link href={`/articles/${a.slug}`}>{a.title}</Link></h2>
-            <p className="text-gray-300 mb-2 max-w-prose">{a.description}</p>
+            <p className="text-alt mb-2 max-w-prose">{a.description}</p>
             <div className="flex flex-wrap gap-2 text-xs text-gray-400">{a.tags.map(t=> <span key={t}>{t}</span>)}</div>
           </li>
         ))}

@@ -77,7 +77,7 @@ export default function Contact() {
               <span className="text-gradient text-glow">YOUR MOVE!</span>
             </h2>
             <div className="w-24 h-1 bg-gradient-to-r from-pink-500 to-purple-500 mx-auto mb-6"></div>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+            <p className="text-xl text-alt max-w-3xl mx-auto">
               Ready to create compelling content that converts? Let's craft stories that 
               resonate with your audience and drive results.
             </p>
@@ -86,7 +86,7 @@ export default function Contact() {
           <div className="grid lg:grid-cols-2 gap-12">
             {/* Contact Information */}
             <motion.div variants={itemVariants}>
-              <h3 className="text-2xl font-semibold text-white mb-8">
+              <h3 className="text-2xl font-semibold text-primary mb-8">
                 Let's Connect
               </h3>
               
@@ -97,10 +97,10 @@ export default function Contact() {
                     <Mail className="w-6 h-6 text-white" />
                   </div>
                   <div className="ml-4">
-                    <h4 className="font-medium text-white">Email</h4>
+                    <h4 className="font-medium text-primary">Email</h4>
                     <a 
                       href={`mailto:${personalInfo.email}`}
-                      className="text-gray-300 hover:text-pink-400 transition-colors cursor-pointer"
+                      className="text-alt hover:text-pink-400 transition-colors cursor-pointer"
                     >
                       {personalInfo.email}
                     </a>
@@ -113,10 +113,10 @@ export default function Contact() {
                     <Phone className="w-6 h-6 text-white" />
                   </div>
                   <div className="ml-4">
-                    <h4 className="font-medium text-white">Phone</h4>
+                    <h4 className="font-medium text-primary">Phone</h4>
                     <a 
                       href={`tel:${personalInfo.phone}`}
-                      className="text-gray-300 hover:text-purple-400 transition-colors cursor-pointer"
+                      className="text-alt hover:text-purple-400 transition-colors cursor-pointer"
                     >
                       {personalInfo.phone}
                     </a>
@@ -129,15 +129,15 @@ export default function Contact() {
                     <MapPin className="w-6 h-6 text-white" />
                   </div>
                   <div className="ml-4">
-                    <h4 className="font-medium text-white">Location</h4>
-                    <p className="text-gray-300">{personalInfo.location}</p>
+                    <h4 className="font-medium text-primary">Location</h4>
+                    <p className="text-alt">{personalInfo.location}</p>
                   </div>
                 </div>
               </div>
 
               {/* Social Links */}
               <div className="mb-8">
-                <h4 className="font-medium text-white mb-4">Follow Me</h4>
+                <h4 className="font-medium text-primary mb-4">Follow Me</h4>
                 <div className="flex space-x-4">
                   <a
                     href={personalInfo.social.github}
@@ -145,7 +145,7 @@ export default function Contact() {
                     rel="noopener noreferrer"
                     className="p-3 glass rounded-lg hover:bg-white/10 transition-colors group cursor-pointer"
                   >
-                    <Github className="w-6 h-6 text-gray-300 group-hover:text-white" />
+                    <Github className="w-6 h-6 icon-muted group-hover:text-primary" />
                   </a>
                   <a
                     href={personalInfo.social.linkedin}
@@ -153,7 +153,7 @@ export default function Contact() {
                     rel="noopener noreferrer"
                     className="p-3 glass rounded-lg hover:bg-white/10 transition-colors group cursor-pointer"
                   >
-                    <Linkedin className="w-6 h-6 text-gray-300 group-hover:text-white" />
+                    <Linkedin className="w-6 h-6 icon-muted group-hover:text-primary" />
                   </a>
                   <a
                     href={personalInfo.social.behance}
@@ -161,7 +161,7 @@ export default function Contact() {
                     rel="noopener noreferrer"
                     className="p-3 glass rounded-lg hover:bg-white/10 transition-colors group cursor-pointer"
                   >
-                    <Users className="w-6 h-6 text-gray-300 group-hover:text-white" />
+                    <Users className="w-6 h-6 icon-muted group-hover:text-primary" />
                   </a>
                   <a
                     href={personalInfo.social.medium}
@@ -169,7 +169,7 @@ export default function Contact() {
                     rel="noopener noreferrer"
                     className="p-3 glass rounded-lg hover:bg-white/10 transition-colors group cursor-pointer"
                   >
-                    <BookOpen className="w-6 h-6 text-gray-300 group-hover:text-white" />
+                    <BookOpen className="w-6 h-6 icon-muted group-hover:text-primary" />
                   </a>
                 </div>
               </div>
@@ -178,9 +178,9 @@ export default function Contact() {
               <div className="glass rounded-xl p-6">
                 <div className="flex items-center mb-4">
                   <div className="w-3 h-3 bg-green-500 rounded-full mr-3 animate-pulse"></div>
-                  <span className="font-medium text-white">Available for new projects</span>
+                  <span className="font-medium text-primary">Available for new projects</span>
                 </div>
-                <p className="text-gray-300">
+                <p className="text-alt">
                   I'm currently accepting new writing projects and collaborations. 
                   Whether you need blog content, marketing copy, or creative storytelling, 
                   let's bring your vision to life!
@@ -191,14 +191,14 @@ export default function Contact() {
             {/* Contact Form */}
             <motion.div variants={itemVariants}>
               <div className="glass rounded-2xl p-8">
-                <h3 className="text-2xl font-semibold text-white mb-6">
+                <h3 className="text-2xl font-semibold text-primary mb-6">
                   Send me a message
                 </h3>
 
                 <form onSubmit={handleSubmit} className="space-y-6">
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                     <div>
-                      <label htmlFor="name" className="block text-sm font-medium text-gray-300 mb-2">
+                      <label htmlFor="name" className="block text-sm font-medium text-alt mb-2">
                         Name *
                       </label>
                       <input
@@ -213,7 +213,7 @@ export default function Contact() {
                       />
                     </div>
                     <div>
-                      <label htmlFor="email" className="block text-sm font-medium text-gray-300 mb-2">
+                      <label htmlFor="email" className="block text-sm font-medium text-alt mb-2">
                         Email *
                       </label>
                       <input
@@ -230,7 +230,7 @@ export default function Contact() {
                   </div>
 
                   <div>
-                    <label htmlFor="subject" className="block text-sm font-medium text-gray-300 mb-2">
+                    <label htmlFor="subject" className="block text-sm font-medium text-alt mb-2">
                       Subject *
                     </label>
                     <input
@@ -246,7 +246,7 @@ export default function Contact() {
                   </div>
 
                   <div>
-                    <label htmlFor="message" className="block text-sm font-medium text-gray-300 mb-2">
+                    <label htmlFor="message" className="block text-sm font-medium text-alt mb-2">
                       Message *
                     </label>
                     <textarea
@@ -310,7 +310,7 @@ export default function Contact() {
             variants={itemVariants}
             className="mt-16 text-center"
           >
-            <h3 className="text-xl font-semibold text-white mb-6">
+            <h3 className="text-xl font-semibold text-primary mb-6">
               Prefer a quick chat?
             </h3>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">

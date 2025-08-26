@@ -73,14 +73,14 @@ export default function Hero() {
 
           <motion.h2
             variants={itemVariants}
-            className="text-2xl md:text-3xl lg:text-4xl font-medium text-white/80 mb-8"
+            className="text-2xl md:text-3xl lg:text-4xl font-medium faded mb-8"
           >
             {personalInfo.title}
           </motion.h2>
 
           <motion.p
             variants={itemVariants}
-            className="text-lg md:text-xl text-gray-300 mb-12 max-w-4xl mx-auto leading-relaxed"
+            className="text-lg md:text-xl text-alt mb-12 max-w-4xl mx-auto leading-relaxed"
           >
             {personalInfo.heroDescription}
           </motion.p>
@@ -90,15 +90,15 @@ export default function Hero() {
             variants={itemVariants}
             className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12 max-w-2xl mx-auto"
           >
-            <div className="flex items-center justify-center space-x-2 text-gray-300">
+            <div className="flex items-center justify-center space-x-2 text-alt">
               <BookOpen className="w-5 h-5 text-purple-400" />
               <span className="text-sm">500+ Articles</span>
             </div>
-            <div className="flex items-center justify-center space-x-2 text-gray-300">
+            <div className="flex items-center justify-center space-x-2 text-alt">
               <Users className="w-5 h-5 text-pink-400" />
               <span className="text-sm">50+ Clients</span>
             </div>
-            <div className="flex items-center justify-center space-x-2 text-gray-300">
+            <div className="flex items-center justify-center space-x-2 text-alt">
               <Globe className="w-5 h-5 text-blue-400" />
               <span className="text-sm">10+ Languages</span>
             </div>
@@ -111,7 +111,7 @@ export default function Hero() {
           >
             <Link
               href="#contact"
-              className="group relative inline-flex items-center px-8 py-4 bg-gradient-to-r from-pink-500 to-purple-500 text-white font-medium rounded-full overflow-hidden transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-pink-500/25 pulse-button cursor-pointer"
+              className="group relative inline-flex items-center px-8 py-4 bg-gradient-to-r from-pink-500 to-purple-500 on-accent font-medium rounded-full overflow-hidden transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-pink-500/25 pulse-button cursor-pointer"
               onClick={(e) => {
                 e.preventDefault()
                 document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })
@@ -144,7 +144,7 @@ export default function Hero() {
               rel="noopener noreferrer"
               className="p-3 glass rounded-full transition-all duration-300 hover:scale-110 hover:bg-white/10 group cursor-pointer"
             >
-              <Github className="w-6 h-6 text-gray-300 group-hover:text-white transition-colors" />
+              <Github className="w-6 h-6 icon-muted group-hover:text-primary transition-colors" />
             </Link>
             <Link
               href={personalInfo.social.linkedin}
@@ -152,7 +152,7 @@ export default function Hero() {
               rel="noopener noreferrer"
               className="p-3 glass rounded-full transition-all duration-300 hover:scale-110 hover:bg-white/10 group cursor-pointer"
             >
-              <Linkedin className="w-6 h-6 text-gray-300 group-hover:text-white transition-colors" />
+              <Linkedin className="w-6 h-6 icon-muted group-hover:text-primary transition-colors" />
             </Link>
             <Link
               href={personalInfo.social.behance}
@@ -160,13 +160,13 @@ export default function Hero() {
               rel="noopener noreferrer"
               className="p-3 glass rounded-full transition-all duration-300 hover:scale-110 hover:bg-white/10 group cursor-pointer"
             >
-              <Users className="w-6 h-6 text-gray-300 group-hover:text-white transition-colors" />
+              <Users className="w-6 h-6 icon-muted group-hover:text-primary transition-colors" />
             </Link>
             <Link
               href={`mailto:${personalInfo.email}`}
               className="p-3 glass rounded-full transition-all duration-300 hover:scale-110 hover:bg-white/10 group cursor-pointer"
             >
-              <Mail className="w-6 h-6 text-gray-300 group-hover:text-white transition-colors" />
+              <Mail className="w-6 h-6 icon-muted group-hover:text-primary transition-colors" />
             </Link>
           </motion.div>
         </motion.div>

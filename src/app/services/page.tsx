@@ -8,7 +8,7 @@ export default function ServicesPage(){
         {services.map(s => (
           <div key={s.id} className="card-hover p-6 rounded-lg">
             <h2 className="text-xl font-semibold mb-2">{s.title}</h2>
-            <p className="text-sm text-gray-300 mb-4">{s.summary}</p>
+            <p className="text-sm text-alt mb-4">{s.summary}</p>
             <ul className="text-xs space-y-1 text-gray-400 list-disc pl-4">
               {s.points.map(p=> <li key={p}>{p}</li>)}
             </ul>
