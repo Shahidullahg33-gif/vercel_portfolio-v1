@@ -7,7 +7,7 @@ import Enhancements from '@/components/Enhancements'
 import Navigation from '@/components/Navigation'
 import ReadingControls from '@/components/ReadingControls'
 import ParallaxDecor from '@/components/ParallaxDecor'
-import TilesBackground from '@/components/TilesBackground'
+import CSSOnlyBackground from '@/components/CSSOnlyBackground'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -61,7 +61,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       <body className={`${inter.className} antialiased`}>
         <a href="#main" className="skip-link">Skip to content</a>
         <div id="scroll-progress" aria-hidden="true" />
-        <TilesBackground />
+        <CSSOnlyBackground />
         <Navigation />
         <Enhancements />
         <ParallaxDecor />

@@ -256,6 +256,41 @@ html { background: var(--c-bg); color: var(--c-text); transition: background-col
   }
 }
 
+/* Background animations for performance */
+@keyframes background-shift {
+  0%, 100% {
+    transform: scale(1) rotate(0deg);
+  }
+  25% {
+    transform: scale(1.1) rotate(90deg);
+  }
+  50% {
+    transform: scale(0.9) rotate(180deg);
+  }
+  75% {
+    transform: scale(1.05) rotate(270deg);
+  }
+}
+
+@keyframes grid-shift {
+  0%, 100% {
+    transform: translate(0, 0);
+  }
+  25% {
+    transform: translate(10px, 5px);
+  }
+  50% {
+    transform: translate(-5px, 10px);
+  }
+  75% {
+    transform: translate(5px, -5px);
+  }
+}
+
+.animate-background-shift {
+  animation: background-shift 30s ease-in-out infinite;
+}
+
 /* Pulse glow animation */
 .pulse-glow {
   animation: pulse-glow 2s ease-in-out infinite;
