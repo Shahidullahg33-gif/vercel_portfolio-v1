@@ -69,8 +69,8 @@ export const education = [
   {
     id: 1,
     degree: "Bachelor of Arts in English Literature",
-    institution: "University of Creative Arts",
-    location: "Your City, State",
+    institution: "University of Punjab",
+    location: "Lahore, Pakistan",
     period: "2015 - 2019",
     description: "Focused on contemporary literature, creative writing, and literary analysis. Graduated with First Class Honours.",
     coursework: [
