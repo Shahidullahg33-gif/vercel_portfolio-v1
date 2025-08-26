@@ -69,6 +69,24 @@ export default function Navigation() {
             {personalInfo.name.split(' ').map(name => name[0]).join('')}
           </Link>
 
+          {/* Theme Switcher */}
+          <form className="hidden md:flex gap-2 items-center mr-6" aria-label="Theme selector">
+            {['dark','soothing','light','minimalist','colorful'].map(t => (
+              <label key={t} className="text-xs text-gray-300 cursor-pointer flex items-center gap-1">
+                <input
+                  type="radio"
+                  name="theme"
+                  value={t}
+                  defaultChecked={t==='dark'}
+                  onChange={(e)=>{document.documentElement.dataset.theme=e.target.value;localStorage.setItem('pref-theme-v2',e.target.value);}}
+                  className="accent-pink-500"
+                  aria-label={`Switch to ${t} theme`}
+                />
+                {t}
+              </label>
+            ))}
+          </form>
+
           {/* Desktop Navigation */}
           <div className="hidden md:block">
             <div className="ml-10 flex items-baseline space-x-8">

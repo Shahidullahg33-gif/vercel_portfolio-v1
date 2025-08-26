@@ -1,8 +1,10 @@
 import './globals.css'
+import './tokens.css'
 import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
 import { personalInfo } from '@/data/personal'
 import CustomCursor from '@/components/CustomCursor'
+import Enhancements from '@/components/Enhancements'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -50,18 +52,17 @@ export const metadata: Metadata = {
   },
 }
 
-export default function RootLayout({
-  children,
-}: {
-  children: React.ReactNode
-}) {
+export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="en" className="scroll-smooth">
+    <html lang="en" className="scroll-smooth" suppressHydrationWarning>
       <body className={`${inter.className} antialiased`}>
+        <a href="#main" className="skip-link">Skip to content</a>
+        <div id="scroll-progress" aria-hidden="true" />
         <CustomCursor />
-        <div className="min-h-screen">
-          {children}
-        </div>
+        <Enhancements />
+        <main id="main" className="site-main max-w-6xl mx-auto px-4">{children}</main>
+        <script dangerouslySetInnerHTML={{__html:`(()=>{const k='pref-theme-v2';const r=document.documentElement;const s=localStorage.getItem(k);if(s)r.dataset.theme=s;else if(matchMedia('(prefers-color-scheme: dark)').matches) r.dataset.theme='dark';})();`}} />
+        <script defer type="module" dangerouslySetInnerHTML={{__html:`const bar=document.getElementById('scroll-progress');function u(){const h=document.documentElement;const p=(h.scrollTop/(h.scrollHeight-h.clientHeight))*100;bar.style.width=p+'%'};addEventListener('scroll',u,{passive:true});u();`}} />
       </body>
     </html>
   )
