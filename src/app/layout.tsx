@@ -2,13 +2,14 @@ import './globals.css'
 import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
 import { personalInfo } from '@/data/personal'
+import CustomCursor from '@/components/CustomCursor'
 
 const inter = Inter({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
   title: `${personalInfo.name} - ${personalInfo.title}`,
   description: personalInfo.bio,
-  keywords: 'full stack developer, web developer, react, next.js, typescript, portfolio',
+  keywords: 'content writer, storyteller, copywriter, content strategy, digital marketing, creative writing',
   authors: [{ name: personalInfo.name }],
   creator: personalInfo.name,
   openGraph: {
@@ -56,7 +57,8 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" className="scroll-smooth">
-      <body className={`${inter.className} bg-gradient-to-br from-arctic-50 via-ice-50 to-frost-50 text-arctic-900 antialiased`}>
+      <body className={`${inter.className} antialiased`}>
+        <CustomCursor />
         <div className="min-h-screen">
           {children}
         </div>

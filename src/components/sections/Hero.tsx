@@ -1,11 +1,10 @@
 'use client'
 
 import { useEffect, useState } from 'react'
-import Image from 'next/image'
 import Link from 'next/link'
 import { motion } from 'framer-motion'
 import { personalInfo } from '@/data/personal'
-import { Github, Linkedin, Mail, Download, ExternalLink } from 'lucide-react'
+import { Github, Linkedin, Mail, Download, ExternalLink, Users, BookOpen, Globe } from 'lucide-react'
 
 export default function Hero() {
   const [mounted, setMounted] = useState(false)
@@ -13,12 +12,6 @@ export default function Hero() {
   useEffect(() => {
     setMounted(true)
   }, [])
-
-  const socialIcons = {
-    github: Github,
-    linkedin: Linkedin,
-    email: Mail,
-  }
 
   const containerVariants = {
     hidden: { opacity: 0 },
@@ -53,13 +46,6 @@ export default function Hero() {
 
   return (
     <section id="home" className="relative min-h-screen flex items-center justify-center overflow-hidden">
-      {/* Background Elements */}
-      <div className="absolute inset-0 bg-gradient-to-br from-arctic-50 via-ice-50 to-frost-50">
-        <div className="absolute top-20 left-10 w-72 h-72 bg-ice-200 rounded-full mix-blend-multiply filter blur-xl opacity-30 animate-pulse-slow" />
-        <div className="absolute top-40 right-10 w-72 h-72 bg-frost-200 rounded-full mix-blend-multiply filter blur-xl opacity-30 animate-pulse-slow animation-delay-2000" />
-        <div className="absolute -bottom-10 left-20 w-72 h-72 bg-arctic-200 rounded-full mix-blend-multiply filter blur-xl opacity-30 animate-pulse-slow animation-delay-4000" />
-      </div>
-
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
         <motion.div
           className="text-center"
@@ -67,48 +53,56 @@ export default function Hero() {
           initial="hidden"
           animate="visible"
         >
-          {/* Profile Image */}
+          {/* Greeting */}
           <motion.div
             variants={itemVariants}
-            className="mb-8 flex justify-center"
+            className="mb-6"
           >
-            <div className="relative">
-              <div className="w-48 h-48 md:w-56 md:h-56 rounded-full overflow-hidden border-4 border-white shadow-2xl floating">
-                <Image
-                  src={personalInfo.avatar}
-                  alt={personalInfo.name}
-                  width={224}
-                  height={224}
-                  className="w-full h-full object-cover"
-                  priority
-                />
-              </div>
-              {/* Decorative ring */}
-              <div className="absolute -inset-4 rounded-full border-2 border-ice-300 opacity-30" />
-            </div>
+            <span className="inline-block px-4 py-2 bg-gradient-to-r from-pink-500/20 to-purple-500/20 border border-pink-500/30 rounded-full text-sm text-pink-400 font-medium">
+              Content Writer & Storyteller
+            </span>
           </motion.div>
 
           {/* Name and Title */}
           <motion.h1
             variants={itemVariants}
-            className="text-4xl md:text-6xl lg:text-7xl font-bold mb-4"
+            className="text-5xl md:text-7xl lg:text-8xl font-bold mb-6"
           >
-            <span className="gradient-text">{personalInfo.name}</span>
+            <span className="text-gradient text-glow">{personalInfo.name}</span>
           </motion.h1>
 
           <motion.h2
             variants={itemVariants}
-            className="text-xl md:text-2xl lg:text-3xl font-medium text-arctic-600 mb-6"
+            className="text-2xl md:text-3xl lg:text-4xl font-medium text-white/80 mb-8"
           >
             {personalInfo.title}
           </motion.h2>
 
           <motion.p
             variants={itemVariants}
-            className="text-lg md:text-xl text-arctic-700 mb-8 max-w-3xl mx-auto leading-relaxed"
+            className="text-lg md:text-xl text-gray-300 mb-12 max-w-4xl mx-auto leading-relaxed"
           >
             {personalInfo.heroDescription}
           </motion.p>
+
+          {/* Featured stats */}
+          <motion.div
+            variants={itemVariants}
+            className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12 max-w-2xl mx-auto"
+          >
+            <div className="flex items-center justify-center space-x-2 text-gray-300">
+              <BookOpen className="w-5 h-5 text-purple-400" />
+              <span className="text-sm">500+ Articles</span>
+            </div>
+            <div className="flex items-center justify-center space-x-2 text-gray-300">
+              <Users className="w-5 h-5 text-pink-400" />
+              <span className="text-sm">50+ Clients</span>
+            </div>
+            <div className="flex items-center justify-center space-x-2 text-gray-300">
+              <Globe className="w-5 h-5 text-blue-400" />
+              <span className="text-sm">10+ Languages</span>
+            </div>
+          </motion.div>
 
           {/* Call to Action Buttons */}
           <motion.div
@@ -117,21 +111,21 @@ export default function Hero() {
           >
             <Link
               href="#contact"
-              className="group relative inline-flex items-center px-8 py-4 bg-gradient-to-r from-ice-500 to-frost-500 text-white font-medium rounded-full overflow-hidden transition-all duration-300 hover:scale-105 hover:shadow-lg pulse-button"
+              className="group relative inline-flex items-center px-8 py-4 bg-gradient-to-r from-pink-500 to-purple-500 text-white font-medium rounded-full overflow-hidden transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-pink-500/25 pulse-button cursor-pointer"
               onClick={(e) => {
                 e.preventDefault()
                 document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })
               }}
             >
               <Mail className="w-5 h-5 mr-2" />
-              Get In Touch
+              Your Move!
             </Link>
 
             <Link
               href={personalInfo.social.resume}
               target="_blank"
               rel="noopener noreferrer"
-              className="group inline-flex items-center px-8 py-4 border-2 border-ice-500 text-ice-600 font-medium rounded-full transition-all duration-300 hover:bg-ice-500 hover:text-white hover:scale-105"
+              className="group inline-flex items-center px-8 py-4 border-2 border-pink-500/50 text-pink-400 font-medium rounded-full transition-all duration-300 hover:bg-pink-500/10 hover:border-pink-500 hover:scale-105 glass cursor-pointer"
             >
               <Download className="w-5 h-5 mr-2" />
               Download Resume
@@ -148,23 +142,31 @@ export default function Hero() {
               href={personalInfo.social.github}
               target="_blank"
               rel="noopener noreferrer"
-              className="p-3 bg-white rounded-full shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-110 group"
+              className="p-3 glass rounded-full transition-all duration-300 hover:scale-110 hover:bg-white/10 group cursor-pointer"
             >
-              <Github className="w-6 h-6 text-arctic-600 group-hover:text-ice-600 transition-colors" />
+              <Github className="w-6 h-6 text-gray-300 group-hover:text-white transition-colors" />
             </Link>
             <Link
               href={personalInfo.social.linkedin}
               target="_blank"
               rel="noopener noreferrer"
-              className="p-3 bg-white rounded-full shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-110 group"
+              className="p-3 glass rounded-full transition-all duration-300 hover:scale-110 hover:bg-white/10 group cursor-pointer"
             >
-              <Linkedin className="w-6 h-6 text-arctic-600 group-hover:text-ice-600 transition-colors" />
+              <Linkedin className="w-6 h-6 text-gray-300 group-hover:text-white transition-colors" />
+            </Link>
+            <Link
+              href={personalInfo.social.behance}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="p-3 glass rounded-full transition-all duration-300 hover:scale-110 hover:bg-white/10 group cursor-pointer"
+            >
+              <Users className="w-6 h-6 text-gray-300 group-hover:text-white transition-colors" />
             </Link>
             <Link
               href={`mailto:${personalInfo.email}`}
-              className="p-3 bg-white rounded-full shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-110 group"
+              className="p-3 glass rounded-full transition-all duration-300 hover:scale-110 hover:bg-white/10 group cursor-pointer"
             >
-              <Mail className="w-6 h-6 text-arctic-600 group-hover:text-ice-600 transition-colors" />
+              <Mail className="w-6 h-6 text-gray-300 group-hover:text-white transition-colors" />
             </Link>
           </motion.div>
         </motion.div>
@@ -178,9 +180,9 @@ export default function Hero() {
         className="absolute bottom-8 left-1/2 transform -translate-x-1/2"
       >
         <div className="flex flex-col items-center">
-          <span className="text-sm text-arctic-500 mb-2">Scroll to explore</span>
-          <div className="w-6 h-10 border-2 border-arctic-300 rounded-full flex justify-center">
-            <div className="w-1 h-3 bg-arctic-400 rounded-full mt-2 animate-bounce" />
+          <span className="text-sm text-gray-400 mb-2">Scroll to explore</span>
+          <div className="w-6 h-10 border-2 border-gray-500 rounded-full flex justify-center">
+            <div className="w-1 h-3 bg-gradient-to-b from-pink-500 to-purple-500 rounded-full mt-2 animate-bounce" />
           </div>
         </div>
       </motion.div>

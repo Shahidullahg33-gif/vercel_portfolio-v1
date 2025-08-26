@@ -1,0 +1,95 @@
+<!-- Creative Fiction Project -->
+<svg width="1200" height="800" viewBox="0 0 1200 800" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="fictionGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#ec4899"/>
+      <stop offset="100%" style="stop-color:#8b5cf6"/>
+    </linearGradient>
+    <radialGradient id="bookGlow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" style="stop-color:#fdf4ff"/>
+      <stop offset="100%" style="stop-color:#f3e8ff"/>
+    </radialGradient>
+  </defs>
+  <rect width="1200" height="800" fill="#f8fafc"/>
+  
+  <!-- Creative writing workspace -->
+  <rect x="80" y="80" width="1040" height="640" fill="white" stroke="#e2e8f0" rx="8"/>
+  <rect x="0" y="0" width="1200" height="80" fill="url(#fictionGrad)"/>
+  <text x="60" y="50" fill="white" font-family="Georgia, serif" font-size="28" font-weight="bold">Creative Fiction Writing</text>
+  
+  <!-- Book cover mockup -->
+  <rect x="120" y="120" width="280" height="400" fill="url(#bookGlow)" stroke="#e5e7eb" rx="8"/>
+  <rect x="140" y="140" width="240" height="360" fill="url(#fictionGrad)" rx="6"/>
+  
+  <!-- Book title on cover -->
+  <text x="260" y="220" text-anchor="middle" fill="white" font-family="Georgia, serif" font-size="18" font-weight="bold">MIDNIGHT</text>
+  <text x="260" y="250" text-anchor="middle" fill="white" font-family="Georgia, serif" font-size="18" font-weight="bold">CHRONICLES</text>
+  <text x="260" y="280" text-anchor="middle" fill="#fde68a" font-family="Georgia, serif" font-size="12">A Collection of Stories</text>
+  
+  <!-- Decorative elements -->
+  <circle cx="260" cy="320" r="30" fill="none" stroke="#fde68a" stroke-width="2"/>
+  <circle cx="260" cy="320" r="20" fill="none" stroke="#fde68a" stroke-width="1"/>
+  <circle cx="260" cy="320" r="10" fill="#fde68a"/>
+  
+  <text x="260" y="450" text-anchor="middle" fill="white" font-family="Georgia, serif" font-size="14">by Anonymous Author</text>
+  
+  <!-- Story collection panel -->
+  <rect x="440" y="120" width="680" height="400" fill="#f9fafb" rx="8"/>
+  <text x="780" y="160" text-anchor="middle" fill="#374151" font-family="Georgia, serif" font-size="20" font-weight="bold">Published Stories</text>
+  
+  <!-- Story cards -->
+  <rect x="480" y="180" width="280" height="80" fill="white" stroke="#e5e7eb" rx="6"/>
+  <text x="620" y="205" text-anchor="middle" fill="#ec4899" font-family="Georgia, serif" font-size="14" font-weight="bold">"The Last Library"</text>
+  <text x="620" y="225" text-anchor="middle" fill="#6b7280" font-family="Arial, sans-serif" font-size="11">Science Fiction • 2,500 words</text>
+  <text x="620" y="245" text-anchor="middle" fill="#9ca3af" font-family="Arial, sans-serif" font-size="10">Featured in Digital Anthology</text>
+  
+  <rect x="800" y="180" width="280" height="80" fill="white" stroke="#e5e7eb" rx="6"/>
+  <text x="940" y="205" text-anchor="middle" fill="#8b5cf6" font-family="Georgia, serif" font-size="14" font-weight="bold">"Ocean's Memory"</text>
+  <text x="940" y="225" text-anchor="middle" fill="#6b7280" font-family="Arial, sans-serif" font-size="11">Fantasy • 3,200 words</text>
+  <text x="940" y="245" text-anchor="middle" fill="#9ca3af" font-family="Arial, sans-serif" font-size="10">Award Winner • Literary Contest</text>
+  
+  <rect x="480" y="280" width="280" height="80" fill="white" stroke="#e5e7eb" rx="6"/>
+  <text x="620" y="305" text-anchor="middle" fill="#059669" font-family="Georgia, serif" font-size="14" font-weight="bold">"Urban Echoes"</text>
+  <text x="620" y="325" text-anchor="middle" fill="#6b7280" font-family="Arial, sans-serif" font-size="11">Contemporary • 4,100 words</text>
+  <text x="620" y="345" text-anchor="middle" fill="#9ca3af" font-family="Arial, sans-serif" font-size="10">Published in Literary Magazine</text>
+  
+  <rect x="800" y="280" width="280" height="80" fill="white" stroke="#e5e7eb" rx="6"/>
+  <text x="940" y="305" text-anchor="middle" fill="#dc2626" font-family="Georgia, serif" font-size="14" font-weight="bold">"Crimson Dawn"</text>
+  <text x="940" y="325" text-anchor="middle" fill="#6b7280" font-family="Arial, sans-serif" font-size="11">Mystery • 2,800 words</text>
+  <text x="940" y="345" text-anchor="middle" fill="#9ca3af" font-family="Arial, sans-serif" font-size="10">Reader's Choice Selection</text>
+  
+  <!-- Writing stats -->
+  <rect x="480" y="380" width="600" height="120" fill="#fef7ff" rx="8"/>
+  <text x="780" y="410" text-anchor="middle" fill="#7c3aed" font-family="Arial, sans-serif" font-size="16" font-weight="bold">Writing Achievements</text>
+  
+  <text x="520" y="440" fill="#8b5cf6" font-family="Arial, sans-serif" font-size="12">📚 15+ Published Stories</text>
+  <text x="520" y="460" fill="#8b5cf6" font-family="Arial, sans-serif" font-size="12">🏆 3 Literary Awards</text>
+  <text x="520" y="480" fill="#8b5cf6" font-family="Arial, sans-serif" font-size="12">📖 50,000+ Words Published</text>
+  
+  <text x="780" y="440" fill="#8b5cf6" font-family="Arial, sans-serif" font-size="12">✍️ Multiple Genres</text>
+  <text x="780" y="460" fill="#8b5cf6" font-family="Arial, sans-serif" font-size="12">🌟 Featured Author</text>
+  <text x="780" y="480" fill="#8b5cf6" font-family="Arial, sans-serif" font-size="12">📝 Editor Collaborations</text>
+  
+  <!-- Genre expertise -->
+  <rect x="120" y="560" width="1000" height="120" fill="white" stroke="#e5e7eb" rx="8"/>
+  <text x="620" y="600" text-anchor="middle" fill="#374151" font-family="Georgia, serif" font-size="18" font-weight="bold">Genre Expertise</text>
+  
+  <rect x="180" y="620" width="120" height="40" fill="#fef3c7" rx="20"/>
+  <text x="240" y="645" text-anchor="middle" fill="#92400e" font-family="Arial, sans-serif" font-size="12">Sci-Fi</text>
+  
+  <rect x="320" y="620" width="120" height="40" fill="#f3e8ff" rx="20"/>
+  <text x="380" y="645" text-anchor="middle" fill="#7c3aed" font-family="Arial, sans-serif" font-size="12">Fantasy</text>
+  
+  <rect x="460" y="620" width="120" height="40" fill="#ecfdf5" rx="20"/>
+  <text x="520" y="645" text-anchor="middle" fill="#065f46" font-family="Arial, sans-serif" font-size="12">Contemporary</text>
+  
+  <rect x="600" y="620" width="120" height="40" fill="#fef2f2" rx="20"/>
+  <text x="660" y="645" text-anchor="middle" fill="#dc2626" font-family="Arial, sans-serif" font-size="12">Mystery</text>
+  
+  <rect x="740" y="620" width="120" height="40" fill="#dbeafe" rx="20"/>
+  <text x="800" y="645" text-anchor="middle" fill="#1e40af" font-family="Arial, sans-serif" font-size="12">Historical</text>
+  
+  <text x="600" y="750" text-anchor="middle" fill="#64748b" font-family="Georgia, serif" font-size="18">
+    Creative Writing • Character Development • World Building • Literary Style
+  </text>
+</svg>

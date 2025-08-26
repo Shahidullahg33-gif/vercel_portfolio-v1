@@ -3,7 +3,7 @@
 import { useState } from 'react'
 import { motion } from 'framer-motion'
 import { personalInfo } from '@/data/personal'
-import { Mail, Phone, MapPin, Send, Github, Linkedin, MessageCircle } from 'lucide-react'
+import { Mail, Phone, MapPin, Send, Github, Linkedin, MessageCircle, Users, BookOpen } from 'lucide-react'
 
 export default function Contact() {
   const [formData, setFormData] = useState({
@@ -63,7 +63,7 @@ export default function Contact() {
   }
 
   return (
-    <section id="contact" className="py-20 bg-white">
+    <section id="contact" className="py-20 relative">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div
           variants={containerVariants}
@@ -73,34 +73,34 @@ export default function Contact() {
         >
           {/* Section Header */}
           <motion.div variants={itemVariants} className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-arctic-900 mb-4">
-              Get In <span className="gradient-text">Touch</span>
+            <h2 className="text-5xl md:text-6xl lg:text-7xl font-bold mb-6">
+              <span className="text-gradient text-glow">YOUR MOVE!</span>
             </h2>
-            <div className="w-24 h-1 bg-gradient-to-r from-ice-500 to-frost-500 mx-auto mb-6"></div>
-            <p className="text-xl text-arctic-600 max-w-3xl mx-auto">
-              Have a project in mind or just want to chat? I'd love to hear from you. 
-              Let's create something amazing together!
+            <div className="w-24 h-1 bg-gradient-to-r from-pink-500 to-purple-500 mx-auto mb-6"></div>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              Ready to create compelling content that converts? Let's craft stories that 
+              resonate with your audience and drive results.
             </p>
           </motion.div>
 
           <div className="grid lg:grid-cols-2 gap-12">
             {/* Contact Information */}
             <motion.div variants={itemVariants}>
-              <h3 className="text-2xl font-semibold text-arctic-900 mb-8">
+              <h3 className="text-2xl font-semibold text-white mb-8">
                 Let's Connect
               </h3>
               
               <div className="space-y-6 mb-8">
                 {/* Email */}
-                <div className="flex items-center group">
-                  <div className="flex-shrink-0 w-12 h-12 bg-gradient-to-r from-ice-500 to-frost-500 rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform">
+                <div className="flex items-center group cursor-pointer">
+                  <div className="flex-shrink-0 w-12 h-12 bg-gradient-to-r from-pink-500 to-purple-500 rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform">
                     <Mail className="w-6 h-6 text-white" />
                   </div>
                   <div className="ml-4">
-                    <h4 className="font-medium text-arctic-900">Email</h4>
+                    <h4 className="font-medium text-white">Email</h4>
                     <a 
                       href={`mailto:${personalInfo.email}`}
-                      className="text-arctic-600 hover:text-ice-600 transition-colors"
+                      className="text-gray-300 hover:text-pink-400 transition-colors cursor-pointer"
                     >
                       {personalInfo.email}
                     </a>
@@ -108,15 +108,15 @@ export default function Contact() {
                 </div>
 
                 {/* Phone */}
-                <div className="flex items-center group">
-                  <div className="flex-shrink-0 w-12 h-12 bg-gradient-to-r from-frost-500 to-ice-500 rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform">
+                <div className="flex items-center group cursor-pointer">
+                  <div className="flex-shrink-0 w-12 h-12 bg-gradient-to-r from-purple-500 to-blue-500 rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform">
                     <Phone className="w-6 h-6 text-white" />
                   </div>
                   <div className="ml-4">
-                    <h4 className="font-medium text-arctic-900">Phone</h4>
+                    <h4 className="font-medium text-white">Phone</h4>
                     <a 
                       href={`tel:${personalInfo.phone}`}
-                      className="text-arctic-600 hover:text-ice-600 transition-colors"
+                      className="text-gray-300 hover:text-purple-400 transition-colors cursor-pointer"
                     >
                       {personalInfo.phone}
                     </a>
@@ -125,70 +125,80 @@ export default function Contact() {
 
                 {/* Location */}
                 <div className="flex items-center group">
-                  <div className="flex-shrink-0 w-12 h-12 bg-gradient-to-r from-arctic-500 to-frost-500 rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform">
+                  <div className="flex-shrink-0 w-12 h-12 bg-gradient-to-r from-blue-500 to-pink-500 rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform">
                     <MapPin className="w-6 h-6 text-white" />
                   </div>
                   <div className="ml-4">
-                    <h4 className="font-medium text-arctic-900">Location</h4>
-                    <p className="text-arctic-600">{personalInfo.location}</p>
+                    <h4 className="font-medium text-white">Location</h4>
+                    <p className="text-gray-300">{personalInfo.location}</p>
                   </div>
                 </div>
               </div>
 
               {/* Social Links */}
               <div className="mb-8">
-                <h4 className="font-medium text-arctic-900 mb-4">Follow Me</h4>
+                <h4 className="font-medium text-white mb-4">Follow Me</h4>
                 <div className="flex space-x-4">
                   <a
                     href={personalInfo.social.github}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="p-3 bg-arctic-100 rounded-lg hover:bg-arctic-200 transition-colors group"
+                    className="p-3 glass rounded-lg hover:bg-white/10 transition-colors group cursor-pointer"
                   >
-                    <Github className="w-6 h-6 text-arctic-600 group-hover:text-arctic-900" />
+                    <Github className="w-6 h-6 text-gray-300 group-hover:text-white" />
                   </a>
                   <a
                     href={personalInfo.social.linkedin}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="p-3 bg-arctic-100 rounded-lg hover:bg-arctic-200 transition-colors group"
+                    className="p-3 glass rounded-lg hover:bg-white/10 transition-colors group cursor-pointer"
                   >
-                    <Linkedin className="w-6 h-6 text-arctic-600 group-hover:text-arctic-900" />
+                    <Linkedin className="w-6 h-6 text-gray-300 group-hover:text-white" />
                   </a>
                   <a
-                    href={`mailto:${personalInfo.email}`}
-                    className="p-3 bg-arctic-100 rounded-lg hover:bg-arctic-200 transition-colors group"
+                    href={personalInfo.social.behance}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="p-3 glass rounded-lg hover:bg-white/10 transition-colors group cursor-pointer"
                   >
-                    <Mail className="w-6 h-6 text-arctic-600 group-hover:text-arctic-900" />
+                    <Users className="w-6 h-6 text-gray-300 group-hover:text-white" />
+                  </a>
+                  <a
+                    href={personalInfo.social.medium}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="p-3 glass rounded-lg hover:bg-white/10 transition-colors group cursor-pointer"
+                  >
+                    <BookOpen className="w-6 h-6 text-gray-300 group-hover:text-white" />
                   </a>
                 </div>
               </div>
 
               {/* Availability */}
-              <div className="bg-gradient-to-r from-ice-50 to-frost-50 rounded-xl p-6">
+              <div className="glass rounded-xl p-6">
                 <div className="flex items-center mb-4">
-                  <div className="w-3 h-3 bg-green-500 rounded-full mr-3"></div>
-                  <span className="font-medium text-arctic-900">Available for new projects</span>
+                  <div className="w-3 h-3 bg-green-500 rounded-full mr-3 animate-pulse"></div>
+                  <span className="font-medium text-white">Available for new projects</span>
                 </div>
-                <p className="text-arctic-600">
-                  I'm currently open to new opportunities and interesting projects. 
-                  Whether you're a startup looking to build your MVP or an established 
-                  company needing additional development resources, let's talk!
+                <p className="text-gray-300">
+                  I'm currently accepting new writing projects and collaborations. 
+                  Whether you need blog content, marketing copy, or creative storytelling, 
+                  let's bring your vision to life!
                 </p>
               </div>
             </motion.div>
 
             {/* Contact Form */}
             <motion.div variants={itemVariants}>
-              <div className="bg-gradient-to-br from-arctic-50 to-ice-50 rounded-2xl p-8 shadow-lg">
-                <h3 className="text-2xl font-semibold text-arctic-900 mb-6">
+              <div className="glass rounded-2xl p-8">
+                <h3 className="text-2xl font-semibold text-white mb-6">
                   Send me a message
                 </h3>
 
                 <form onSubmit={handleSubmit} className="space-y-6">
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                     <div>
-                      <label htmlFor="name" className="block text-sm font-medium text-arctic-700 mb-2">
+                      <label htmlFor="name" className="block text-sm font-medium text-gray-300 mb-2">
                         Name *
                       </label>
                       <input
@@ -198,12 +208,12 @@ export default function Contact() {
                         value={formData.name}
                         onChange={handleChange}
                         required
-                        className="w-full px-4 py-3 border border-arctic-200 rounded-lg focus:ring-2 focus:ring-ice-500 focus:border-transparent transition-all bg-white"
+                        className="w-full px-4 py-3 bg-white/5 border border-white/20 rounded-lg focus:ring-2 focus:ring-pink-500 focus:border-transparent transition-all text-white placeholder-gray-400"
                         placeholder="Your name"
                       />
                     </div>
                     <div>
-                      <label htmlFor="email" className="block text-sm font-medium text-arctic-700 mb-2">
+                      <label htmlFor="email" className="block text-sm font-medium text-gray-300 mb-2">
                         Email *
                       </label>
                       <input
@@ -213,14 +223,14 @@ export default function Contact() {
                         value={formData.email}
                         onChange={handleChange}
                         required
-                        className="w-full px-4 py-3 border border-arctic-200 rounded-lg focus:ring-2 focus:ring-ice-500 focus:border-transparent transition-all bg-white"
+                        className="w-full px-4 py-3 bg-white/5 border border-white/20 rounded-lg focus:ring-2 focus:ring-pink-500 focus:border-transparent transition-all text-white placeholder-gray-400"
                         placeholder="your.email@example.com"
                       />
                     </div>
                   </div>
 
                   <div>
-                    <label htmlFor="subject" className="block text-sm font-medium text-arctic-700 mb-2">
+                    <label htmlFor="subject" className="block text-sm font-medium text-gray-300 mb-2">
                       Subject *
                     </label>
                     <input
@@ -230,13 +240,13 @@ export default function Contact() {
                       value={formData.subject}
                       onChange={handleChange}
                       required
-                      className="w-full px-4 py-3 border border-arctic-200 rounded-lg focus:ring-2 focus:ring-ice-500 focus:border-transparent transition-all bg-white"
-                      placeholder="Project discussion"
+                      className="w-full px-4 py-3 bg-white/5 border border-white/20 rounded-lg focus:ring-2 focus:ring-pink-500 focus:border-transparent transition-all text-white placeholder-gray-400"
+                      placeholder="Content project discussion"
                     />
                   </div>
 
                   <div>
-                    <label htmlFor="message" className="block text-sm font-medium text-arctic-700 mb-2">
+                    <label htmlFor="message" className="block text-sm font-medium text-gray-300 mb-2">
                       Message *
                     </label>
                     <textarea
@@ -246,8 +256,8 @@ export default function Contact() {
                       onChange={handleChange}
                       required
                       rows={6}
-                      className="w-full px-4 py-3 border border-arctic-200 rounded-lg focus:ring-2 focus:ring-ice-500 focus:border-transparent transition-all bg-white resize-none"
-                      placeholder="Tell me about your project or just say hello!"
+                      className="w-full px-4 py-3 bg-white/5 border border-white/20 rounded-lg focus:ring-2 focus:ring-pink-500 focus:border-transparent transition-all text-white placeholder-gray-400 resize-none"
+                      placeholder="Tell me about your content needs or just say hello!"
                     />
                   </div>
 
@@ -255,10 +265,10 @@ export default function Contact() {
                   <button
                     type="submit"
                     disabled={isSubmitting}
-                    className={`w-full flex items-center justify-center px-8 py-4 rounded-lg font-medium transition-all duration-300 ${
+                    className={`w-full flex items-center justify-center px-8 py-4 rounded-lg font-medium transition-all duration-300 cursor-pointer ${
                       isSubmitting
-                        ? 'bg-arctic-400 cursor-not-allowed'
-                        : 'bg-gradient-to-r from-ice-500 to-frost-500 hover:from-ice-600 hover:to-frost-600 hover:scale-105 shadow-lg hover:shadow-xl'
+                        ? 'bg-gray-600 cursor-not-allowed'
+                        : 'bg-gradient-to-r from-pink-500 to-purple-500 hover:from-pink-600 hover:to-purple-600 hover:scale-105 shadow-lg hover:shadow-pink-500/25'
                     } text-white`}
                   >
                     {isSubmitting ? (
@@ -276,16 +286,16 @@ export default function Contact() {
 
                   {/* Status Messages */}
                   {submitStatus === 'success' && (
-                    <div className="p-4 bg-green-50 border border-green-200 rounded-lg">
-                      <p className="text-green-800">
+                    <div className="p-4 bg-green-500/20 border border-green-500/30 rounded-lg">
+                      <p className="text-green-300">
                         Thanks for your message! I'll get back to you soon.
                       </p>
                     </div>
                   )}
 
                   {submitStatus === 'error' && (
-                    <div className="p-4 bg-red-50 border border-red-200 rounded-lg">
-                      <p className="text-red-800">
+                    <div className="p-4 bg-red-500/20 border border-red-500/30 rounded-lg">
+                      <p className="text-red-300">
                         Something went wrong. Please try again or email me directly.
                       </p>
                     </div>
@@ -300,13 +310,13 @@ export default function Contact() {
             variants={itemVariants}
             className="mt-16 text-center"
           >
-            <h3 className="text-xl font-semibold text-arctic-900 mb-6">
+            <h3 className="text-xl font-semibold text-white mb-6">
               Prefer a quick chat?
             </h3>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a
                 href={`mailto:${personalInfo.email}?subject=Quick Chat Request`}
-                className="inline-flex items-center px-6 py-3 bg-white border-2 border-ice-500 text-ice-600 font-medium rounded-lg hover:bg-ice-50 transition-all duration-300"
+                className="inline-flex items-center px-6 py-3 glass border-2 border-pink-500/50 text-pink-400 font-medium rounded-lg hover:bg-pink-500/10 hover:border-pink-500 transition-all duration-300 cursor-pointer"
               >
                 <Mail className="w-5 h-5 mr-2" />
                 Email Me
@@ -315,7 +325,7 @@ export default function Contact() {
                 href={personalInfo.social.linkedin}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center px-6 py-3 bg-white border-2 border-frost-500 text-frost-600 font-medium rounded-lg hover:bg-frost-50 transition-all duration-300"
+                className="inline-flex items-center px-6 py-3 glass border-2 border-purple-500/50 text-purple-400 font-medium rounded-lg hover:bg-purple-500/10 hover:border-purple-500 transition-all duration-300 cursor-pointer"
               >
                 <MessageCircle className="w-5 h-5 mr-2" />
                 LinkedIn Message

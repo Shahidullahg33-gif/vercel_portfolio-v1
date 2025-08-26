@@ -1,119 +1,119 @@
-// Projects Portfolio - Edit this file to showcase your projects
+// Content Writing Portfolio - Edit this file to showcase your writing projects
 export const projects = [
   {
     id: 1,
-    title: "E-Commerce Platform",
-    description: "A full-featured e-commerce platform built with Next.js and Stripe integration. Features include product catalog, shopping cart, user authentication, and admin dashboard.",
-    longDescription: "This comprehensive e-commerce solution demonstrates my ability to build complex, scalable web applications. The platform includes advanced features like real-time inventory management, multi-vendor support, and analytics dashboard.",
-    image: "/projects/ecommerce.svg", // Add project images to public/projects/
-    technologies: ["Next.js", "TypeScript", "Stripe", "PostgreSQL", "Prisma", "Tailwind CSS"],
+    title: "Brand Storytelling Campaign",
+    description: "Comprehensive brand narrative development for a luxury fashion startup, including brand voice guidelines, website copy, and marketing materials.",
+    longDescription: "This project involved creating a complete brand identity through storytelling for a sustainable luxury fashion brand. I developed their unique voice, crafted compelling product descriptions, and created content that resonated with their target audience of conscious consumers.",
+    image: "/projects/writing1.svg",
+    technologies: ["Brand Strategy", "Copywriting", "Content Strategy", "SEO Writing", "Social Media"],
     features: [
-      "User authentication and authorization",
-      "Product catalog with search and filters",
-      "Shopping cart and checkout process",
-      "Payment processing with Stripe",
-      "Admin dashboard for inventory management",
-      "Order tracking and management",
-      "Responsive design for all devices"
+      "Brand voice and tone guidelines",
+      "Website copy for 50+ product pages", 
+      "Email marketing campaign series",
+      "Social media content calendar",
+      "Blog content strategy and implementation",
+      "Product descriptions optimized for SEO",
+      "Press release and media kit creation"
     ],
-    github: "https://github.com/yourusername/ecommerce-platform", // Update with actual repo
-    live: "https://your-ecommerce-demo.vercel.app", // Update with actual demo
+    github: "", // Not applicable for writing work
+    live: "https://brandexample.com", // Update with actual portfolio link
     status: "completed",
-    category: "Full Stack"
+    category: "Brand Writing"
   },
   {
     id: 2,
-    title: "Task Management App",
-    description: "A collaborative task management application inspired by Trello, built with React and Firebase. Features drag-and-drop functionality and real-time updates.",
-    longDescription: "This project showcases my skills in building interactive, real-time applications. The app features a modern UI with smooth animations and supports team collaboration with live updates.",
-    image: "/projects/taskmanager.svg",
-    technologies: ["React", "Firebase", "Framer Motion", "React DnD", "Styled Components"],
+    title: "Editorial Content Series",
+    description: "Monthly editorial content creation for a lifestyle magazine, covering topics from wellness to technology trends, with focus on engaging storytelling.",
+    longDescription: "I produced a series of in-depth editorial pieces for a digital lifestyle magazine, focusing on emerging trends and human interest stories. Each piece required extensive research, interviews, and crafting narratives that would engage a diverse readership.",
+    image: "/projects/writing2.svg",
+    technologies: ["Editorial Writing", "Research", "Interviewing", "SEO", "Content Management"],
     features: [
-      "Drag and drop task management",
-      "Real-time collaboration",
-      "User authentication",
-      "Board and list management",
-      "File attachments",
-      "Due dates and notifications",
-      "Team member assignment"
+      "15+ feature articles published monthly",
+      "Interview coordination with industry experts",
+      "Research-backed trend analysis pieces",
+      "SEO-optimized content for organic reach",
+      "Social media amplification strategy",
+      "Reader engagement tracking and optimization",
+      "Collaborative editing with design team"
     ],
-    github: "https://github.com/yourusername/task-manager",
-    live: "https://your-taskmanager-demo.vercel.app",
-    status: "completed",
-    category: "Frontend"
+    github: "",
+    live: "https://magazine-example.com",
+    status: "ongoing",
+    category: "Editorial"
   },
   {
     id: 3,
-    title: "Weather Analytics Dashboard",
-    description: "A comprehensive weather analytics dashboard with data visualization and forecasting. Built with React and integrates multiple weather APIs.",
-    longDescription: "This project demonstrates my ability to work with external APIs and create meaningful data visualizations. The dashboard provides detailed weather insights with interactive charts and maps.",
-    image: "/projects/weather.svg",
-    technologies: ["React", "D3.js", "Chart.js", "OpenWeather API", "Material-UI"],
+    title: "E-commerce Copy Optimization",
+    description: "Complete website copy overhaul for an e-commerce platform, resulting in 40% increase in conversion rates through strategic copywriting.",
+    longDescription: "This project involved analyzing user behavior and rewriting all customer-facing copy for a major e-commerce platform. The focus was on creating persuasive, clear, and conversion-focused content that guided users through their purchase journey.",
+    image: "/projects/writing3.svg",
+    technologies: ["Conversion Copywriting", "UX Writing", "A/B Testing", "Analytics", "CRO"],
     features: [
-      "Real-time weather data",
-      "Interactive charts and graphs",
-      "Location-based forecasting",
-      "Historical data analysis",
-      "Weather alerts and notifications",
-      "Export data functionality",
-      "Mobile-responsive design"
+      "Product page copy optimization",
+      "Checkout flow microcopy improvement",
+      "Email sequence creation for cart abandonment",
+      "Landing page copy for ad campaigns",
+      "FAQ and help section rewrite",
+      "Review and testimonial integration",
+      "Mobile-optimized copy strategies"
     ],
-    github: "https://github.com/yourusername/weather-dashboard",
-    live: "https://your-weather-demo.vercel.app",
+    github: "",
+    live: "https://ecommerce-example.com",
     status: "completed",
-    category: "Data Visualization"
+    category: "Commercial Copy"
   },
   {
     id: 4,
-    title: "AI-Powered Blog Platform",
-    description: "A modern blog platform with AI-assisted content creation features. Built with Next.js and integrates OpenAI API for content suggestions.",
-    longDescription: "This innovative blog platform showcases my interest in AI integration. Writers can get AI assistance for content creation while maintaining full control over their articles.",
-    image: "/projects/blog.svg",
-    technologies: ["Next.js", "OpenAI API", "MDX", "Prisma", "NextAuth.js", "Tailwind CSS"],
+    title: "Content Localization Project",
+    description: "Multilingual content adaptation for a global SaaS company, ensuring cultural relevance and maintaining brand voice across different markets.",
+    longDescription: "I led the content localization effort for a SaaS platform expanding into European markets. This involved not just translation, but cultural adaptation of messaging to resonate with local audiences while maintaining the core brand identity.",
+    image: "/projects/writing4.svg",
+    technologies: ["Localization", "Cultural Adaptation", "Brand Guidelines", "Market Research"],
     features: [
-      "AI-powered content suggestions",
-      "Rich text editor with MDX support",
-      "User authentication and profiles",
-      "Comment system with moderation",
-      "SEO optimization",
-      "Analytics dashboard",
-      "Newsletter integration"
+      "Content adaptation for 5 European markets",
+      "Cultural sensitivity review and optimization",
+      "Local market research and insights",
+      "Brand voice maintenance across languages",
+      "Collaboration with local marketing teams",
+      "Style guide creation for each market",
+      "Performance tracking and optimization"
     ],
-    github: "https://github.com/yourusername/ai-blog-platform",
-    live: "https://your-blog-demo.vercel.app",
-    status: "in-progress",
-    category: "Full Stack"
+    github: "",
+    live: "https://saas-example.com",
+    status: "completed",
+    category: "Localization"
   },
   {
     id: 5,
-    title: "Mobile Fitness Tracker",
-    description: "A React Native mobile app for fitness tracking with workout plans and progress monitoring. Features offline capability and data synchronization.",
-    longDescription: "This mobile application demonstrates my cross-platform development skills. The app provides a comprehensive fitness tracking solution with intuitive UI and robust data management.",
-    image: "/projects/fitness.svg",
-    technologies: ["React Native", "Expo", "SQLite", "Redux", "Firebase", "React Navigation"],
+    title: "Creative Fiction Project",
+    description: "Currently working on a contemporary fiction novel exploring themes of identity and belonging in the digital age, targeted for 2025 publication.",
+    longDescription: "My debut novel is a contemporary fiction piece that examines how digital connectivity affects human relationships and personal identity. Set in a near-future scenario, it follows multiple characters navigating love, loss, and self-discovery in an increasingly connected world.",
+    image: "/projects/writing5.svg",
+    technologies: ["Creative Writing", "Character Development", "Plot Structure", "World Building"],
     features: [
-      "Workout plan creation",
-      "Progress tracking and analytics",
-      "Offline data storage",
-      "Social sharing features",
-      "Custom exercise database",
-      "Goal setting and achievements",
-      "Wearable device integration"
+      "85,000-word contemporary fiction novel",
+      "Multi-perspective narrative structure",
+      "Themes of technology and human connection",
+      "Character-driven plot development",
+      "Beta reader feedback integration",
+      "Professional editing and revision process",
+      "Query letter and synopsis preparation"
     ],
-    github: "https://github.com/yourusername/fitness-tracker",
-    live: "https://expo.dev/@yourusername/fitness-tracker", // Expo link
-    status: "completed",
-    category: "Mobile"
+    github: "",
+    live: "https://your-novel-preview.com",
+    status: "in-progress",
+    category: "Creative Writing"
   }
 ]
 
 // Project categories for filtering
 export const projectCategories = [
   "All",
-  "Full Stack",
-  "Frontend",
-  "Backend",
-  "Mobile",
-  "Data Visualization",
-  "AI/ML"
+  "Brand Writing",
+  "Editorial", 
+  "Commercial Copy",
+  "Localization",
+  "Creative Writing",
+  "Technical Writing"
 ]

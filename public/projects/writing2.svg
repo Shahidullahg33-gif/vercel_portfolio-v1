@@ -1,0 +1,72 @@
+<!-- Editorial Writing Project -->
+<svg width="1200" height="800" viewBox="0 0 1200 800" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="editorialGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#059669"/>
+      <stop offset="100%" style="stop-color:#0891b2"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="800" fill="#f8fafc"/>
+  
+  <!-- Magazine layout -->
+  <rect x="80" y="80" width="1040" height="640" fill="white" stroke="#e2e8f0" rx="8"/>
+  <rect x="0" y="0" width="1200" height="80" fill="url(#editorialGrad)"/>
+  <text x="60" y="50" fill="white" font-family="Georgia, serif" font-size="28" font-weight="bold">Editorial Content Series</text>
+  
+  <!-- Article layout -->
+  <rect x="120" y="120" width="480" height="300" fill="#f8fafc" rx="8"/>
+  <rect x="140" y="140" width="440" height="40" fill="#059669" rx="4"/>
+  <text x="360" y="165" text-anchor="middle" fill="white" font-family="Georgia, serif" font-size="16" font-weight="bold">FEATURE ARTICLE</text>
+  
+  <!-- Article content lines -->
+  <rect x="140" y="200" width="400" height="8" fill="#d1d5db" rx="4"/>
+  <rect x="140" y="220" width="440" height="8" fill="#e5e7eb" rx="4"/>
+  <rect x="140" y="240" width="380" height="8" fill="#e5e7eb" rx="4"/>
+  <rect x="140" y="260" width="420" height="8" fill="#e5e7eb" rx="4"/>
+  <rect x="140" y="280" width="360" height="8" fill="#e5e7eb" rx="4"/>
+  
+  <!-- Interview section -->
+  <rect x="140" y="320" width="440" height="80" fill="#ecfdf5" rx="6"/>
+  <text x="360" y="350" text-anchor="middle" fill="#065f46" font-family="Arial, sans-serif" font-size="14" font-weight="bold">EXPERT INTERVIEW</text>
+  <text x="360" y="380" text-anchor="middle" fill="#047857" font-family="Arial, sans-serif" font-size="12">"Insightful quotes and industry expertise"</text>
+  
+  <!-- Right sidebar -->
+  <rect x="640" y="120" width="480" height="300" fill="#f1f5f9" rx="8"/>
+  <text x="880" y="160" text-anchor="middle" fill="#374151" font-family="Arial, sans-serif" font-size="18" font-weight="bold">Monthly Statistics</text>
+  
+  <!-- Stats bars -->
+  <rect x="680" y="200" width="300" height="20" fill="#dbeafe" rx="10"/>
+  <rect x="680" y="200" width="240" height="20" fill="#3b82f6" rx="10"/>
+  <text x="1020" y="215" fill="#1e40af" font-family="Arial, sans-serif" font-size="12">15+ Articles</text>
+  
+  <rect x="680" y="240" width="300" height="20" fill="#fef3c7" rx="10"/>
+  <rect x="680" y="240" width="180" height="20" fill="#f59e0b" rx="10"/>
+  <text x="1020" y="255" fill="#d97706" font-family="Arial, sans-serif" font-size="12">2M+ Views</text>
+  
+  <rect x="680" y="280" width="300" height="20" fill="#ecfdf5" rx="10"/>
+  <rect x="680" y="280" width="200" height="20" fill="#10b981" rx="10"/>
+  <text x="1020" y="295" fill="#059669" font-family="Arial, sans-serif" font-size="12">SEO Optimized</text>
+  
+  <!-- Topics covered -->
+  <rect x="120" y="460" width="1000" height="200" fill="white" stroke="#e5e7eb" rx="8"/>
+  <text x="620" y="500" text-anchor="middle" fill="#374151" font-family="Arial, sans-serif" font-size="18" font-weight="bold">Topics Covered</text>
+  
+  <rect x="180" y="530" width="120" height="40" fill="#fef3c7" rx="20"/>
+  <text x="240" y="555" text-anchor="middle" fill="#92400e" font-family="Arial, sans-serif" font-size="12">Wellness</text>
+  
+  <rect x="320" y="530" width="120" height="40" fill="#dbeafe" rx="20"/>
+  <text x="380" y="555" text-anchor="middle" fill="#1e40af" font-family="Arial, sans-serif" font-size="12">Technology</text>
+  
+  <rect x="460" y="530" width="120" height="40" fill="#ecfdf5" rx="20"/>
+  <text x="520" y="555" text-anchor="middle" fill="#065f46" font-family="Arial, sans-serif" font-size="12">Lifestyle</text>
+  
+  <rect x="600" y="530" width="120" height="40" fill="#f3e8ff" rx="20"/>
+  <text x="660" y="555" text-anchor="middle" fill="#7c3aed" font-family="Arial, sans-serif" font-size="12">Culture</text>
+  
+  <rect x="740" y="530" width="120" height="40" fill="#fef2f2" rx="20"/>
+  <text x="800" y="555" text-anchor="middle" fill="#dc2626" font-family="Arial, sans-serif" font-size="12">Travel</text>
+  
+  <text x="600" y="750" text-anchor="middle" fill="#64748b" font-family="Arial, sans-serif" font-size="18">
+    Editorial Writing • Research • Interviewing • SEO
+  </text>
+</svg>
