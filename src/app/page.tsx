@@ -1,7 +1,6 @@
 'use client'
 
 import { Suspense } from 'react'
-import Navigation from '@/components/Navigation'
 import Hero from '@/components/sections/Hero'
 import About from '@/components/sections/About'
 import Skills from '@/components/sections/Skills'
@@ -14,7 +13,10 @@ import LoadingSpinner from '@/components/ui/LoadingSpinner'
 export default function Home() {
   return (
     <main className="relative">
-      <Navigation />
+      <div aria-hidden="true" className="pointer-events-none absolute inset-0 overflow-hidden">
+        <span data-parallax="0.25" className="decor absolute top-24 left-6 text-9xl font-black opacity-[0.02] select-none">STORY</span>
+        <span data-parallax="0.45" className="decor absolute bottom-32 right-10 text-8xl font-black opacity-[0.02] select-none">STRATEGY</span>
+      </div>
       
       <Suspense fallback={<LoadingSpinner />}>
         <Hero />

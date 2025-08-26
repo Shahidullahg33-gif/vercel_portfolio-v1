@@ -5,79 +5,47 @@ import Link from 'next/link'
 import { personalInfo } from '@/data/personal'
 
 const navItems = [
-  { name: 'Home', href: '#home' },
-  { name: 'About', href: '#about' },
-  { name: 'Skills', href: '#skills' },
-  { name: 'Projects', href: '#projects' },
-  { name: 'Experience', href: '#experience' },
-  { name: 'Contact', href: '#contact' },
+  { name: 'Home', href: '/' },
+  { name: 'Portfolio', href: '/portfolio' },
+  { name: 'Services', href: '/services' },
+  { name: 'About', href: '/about' },
+  { name: 'Articles', href: '/articles' },
+  { name: 'Contact', href: '/contact' },
 ]
 
 export default function Navigation() {
   const [isOpen, setIsOpen] = useState(false)
   const [scrolled, setScrolled] = useState(false)
-  const [activeSection, setActiveSection] = useState('home')
+  const [activePath, setActivePath] = useState('/')
 
   useEffect(() => {
-    const handleScroll = () => {
-      setScrolled(window.scrollY > 50)
-      
-      // Update active section based on scroll position
-      const sections = navItems.map(item => item.href.slice(1))
-      let current = 'home'
-      
-      for (const section of sections) {
-        const element = document.getElementById(section)
-        if (element) {
-          const rect = element.getBoundingClientRect()
-          if (rect.top <= 100 && rect.bottom >= 100) {
-            current = section
-          }
-        }
-      }
-      
-      setActiveSection(current)
-    }
-
-    window.addEventListener('scroll', handleScroll)
-    return () => window.removeEventListener('scroll', handleScroll)
+    setActivePath(window.location.pathname)
+    const onScroll = () => setScrolled(window.scrollY > 24)
+    window.addEventListener('scroll', onScroll)
+    return () => window.removeEventListener('scroll', onScroll)
   }, [])
 
-  const scrollToSection = (href: string) => {
-    const element = document.getElementById(href.slice(1))
-    if (element) {
-      element.scrollIntoView({ behavior: 'smooth' })
-    }
-    setIsOpen(false)
-  }
-
   return (
-    <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-      scrolled ? 'bg-white/90 backdrop-blur-md shadow-lg' : 'bg-transparent'
-    }`}>
+  <nav className={`site-nav fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${scrolled ? 'nav-scrolled' : ''}`}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
           <Link 
-            href="#home" 
-            onClick={(e) => {
-              e.preventDefault()
-              scrollToSection('#home')
-            }}
+            href="/" 
             className="text-xl font-bold gradient-text hover:scale-105 transition-transform duration-200"
           >
             {personalInfo.name.split(' ').map(name => name[0]).join('')}
           </Link>
 
           {/* Theme Switcher */}
-          <form className="hidden md:flex gap-2 items-center mr-6" aria-label="Theme selector">
+    <form className="hidden md:flex gap-2 items-center mr-6" aria-label="Theme selector">
             {['dark','soothing','light','minimalist','colorful'].map(t => (
               <label key={t} className="text-xs text-gray-300 cursor-pointer flex items-center gap-1">
                 <input
                   type="radio"
                   name="theme"
                   value={t}
-                  defaultChecked={t==='dark'}
+      defaultChecked={t==='dark'}
                   onChange={(e)=>{document.documentElement.dataset.theme=e.target.value;localStorage.setItem('pref-theme-v2',e.target.value);}}
                   className="accent-pink-500"
                   aria-label={`Switch to ${t} theme`}
@@ -94,14 +62,8 @@ export default function Navigation() {
                 <Link
                   key={item.name}
                   href={item.href}
-                  onClick={(e) => {
-                    e.preventDefault()
-                    scrollToSection(item.href)
-                  }}
-                  className={`px-3 py-2 text-sm font-medium transition-all duration-200 hover:text-ice-600 ${
-                    activeSection === item.href.slice(1)
-                      ? 'text-ice-600 border-b-2 border-ice-600'
-                      : 'text-arctic-700 hover:border-b-2 hover:border-ice-300'
+                  className={`px-3 py-2 text-sm font-medium transition-all duration-200 nav-link ${
+                    activePath === item.href ? 'is-active' : ''
                   }`}
                 >
                   {item.name}
@@ -143,15 +105,7 @@ export default function Navigation() {
             <Link
               key={item.name}
               href={item.href}
-              onClick={(e) => {
-                e.preventDefault()
-                scrollToSection(item.href)
-              }}
-              className={`block px-3 py-2 text-base font-medium transition-all duration-200 rounded-md ${
-                activeSection === item.href.slice(1)
-                  ? 'text-ice-600 bg-ice-50'
-                  : 'text-arctic-700 hover:text-ice-600 hover:bg-arctic-50'
-              }`}
+              className={`block px-3 py-2 text-base font-medium transition-all duration-200 rounded-md nav-link ${activePath===item.href?'is-active':''}`}
             >
               {item.name}
             </Link>

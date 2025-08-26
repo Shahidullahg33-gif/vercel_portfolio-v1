@@ -3,9 +3,13 @@ import Link from 'next/link'
 
 export default function PortfolioPage(){
   return (
-    <main className="max-w-6xl mx-auto px-6 py-24">
+    <main className="max-w-6xl mx-auto px-6 py-24 relative">
+      <div aria-hidden="true" className="pointer-events-none absolute inset-0 overflow-hidden">
+        <span data-parallax="0.3" className="decor absolute top-10 -left-20 text-8xl font-black opacity-[0.03] select-none">WRITING</span>
+        <span data-parallax="0.5" className="decor absolute bottom-10 -right-16 text-7xl font-black opacity-[0.025] select-none">IMPACT</span>
+      </div>
       <h1 className="text-4xl font-bold mb-12 text-gradient">Case Studies</h1>
-      <div className="grid md:grid-cols-2 gap-10">
+  <div className="case-grid grid gap-10 cv-auto">
         {caseStudies.map(cs => (
           <article key={cs.slug} className="card-hover p-6 rounded-lg tilt">
             <h2 className="text-2xl font-semibold mb-3">{cs.title}</h2>

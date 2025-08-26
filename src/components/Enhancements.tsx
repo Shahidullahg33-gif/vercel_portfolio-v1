@@ -11,6 +11,15 @@ const pageAccents: Record<string,string> = {
   '/about': 'hsl(210 70% 50%)'
 }
 
+const colorfulAccentWheel = [
+  'hsl(345 85% 55%)', // home energy
+  'hsl(200 85% 50%)', // portfolio
+  'hsl(145 70% 45%)', // services
+  'hsl(275 70% 55%)', // articles
+  'hsl(32 90% 55%)',  // about
+  'hsl(20 90% 55%)'   // contact
+]
+
 export default function Enhancements(){
   const pathname = usePathname()
 
@@ -22,7 +31,13 @@ export default function Enhancements(){
 
     // Accent per page
     const base = pathname.replace(/\/$/,'') || '/'
-    const accent = pageAccents[base] || 'var(--c-accent)'
+    let accent = pageAccents[base] || 'var(--c-accent)'
+    // Colorful theme dynamic rotation
+    if (document.documentElement.dataset.theme === 'colorful') {
+      const pathIndexMap = ['/', '/portfolio', '/services', '/articles', '/about', '/contact']
+      const idx = Math.max(0, pathIndexMap.indexOf(base))
+      accent = colorfulAccentWheel[idx] || accent
+    }
     document.documentElement.style.setProperty('--c-accent-dynamic', accent)
 
     // Intersection reveal
@@ -38,7 +53,7 @@ export default function Enhancements(){
 
     // Tilt cards (disabled for minimalist theme or reduced-motion)
     const root = document.documentElement
-    const isMinimalist = root.dataset.theme === 'minimalist'
+  const isMinimalist = root.dataset.theme === 'minimalist'
     if (!isMinimalist && !root.classList.contains('reduced-motion') && matchMedia('(pointer:fine)').matches){
       const cards = document.querySelectorAll<HTMLElement>('.tilt')
       const max = 8
