@@ -1,0 +1,53 @@
+<!-- Fitness Tracker Mobile App Project Screenshot Placeholder -->
+<svg width="1200" height="800" viewBox="0 0 1200 800" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="fitnessGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#f59e0b"/>
+      <stop offset="100%" style="stop-color:#dc2626"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="800" fill="#f3f4f6"/>
+  
+  <!-- Phone mockups -->
+  <rect x="200" y="100" width="250" height="500" fill="black" rx="25"/>
+  <rect x="220" y="120" width="210" height="460" fill="white" rx="15"/>
+  
+  <rect x="500" y="100" width="250" height="500" fill="black" rx="25"/>
+  <rect x="520" y="120" width="210" height="460" fill="white" rx="15"/>
+  
+  <rect x="800" y="100" width="250" height="500" fill="black" rx="25"/>
+  <rect x="820" y="120" width="210" height="460" fill="white" rx="15"/>
+  
+  <!-- Phone 1: Dashboard -->
+  <rect x="230" y="140" width="190" height="40" fill="url(#fitnessGrad)" rx="8"/>
+  <text x="325" y="165" text-anchor="middle" fill="white" font-family="Arial, sans-serif" font-size="16" font-weight="bold">Fitness Tracker</text>
+  
+  <circle cx="325" cy="250" r="50" fill="#fef3c7" stroke="#f59e0b" stroke-width="8"/>
+  <text x="325" y="260" text-anchor="middle" fill="#d97706" font-family="Arial, sans-serif" font-size="20" font-weight="bold">68%</text>
+  
+  <rect x="250" y="320" width="150" height="30" fill="#f0fdf4" rx="15"/>
+  <text x="325" y="340" text-anchor="middle" fill="#16a34a" font-family="Arial, sans-serif" font-size="12">Daily Goal</text>
+  
+  <!-- Phone 2: Workout -->
+  <rect x="530" y="140" width="190" height="40" fill="url(#fitnessGrad)" rx="8"/>
+  <text x="625" y="165" text-anchor="middle" fill="white" font-family="Arial, sans-serif" font-size="16" font-weight="bold">Workout</text>
+  
+  <rect x="540" y="200" width="170" height="60" fill="#fee2e2" rx="8"/>
+  <rect x="540" y="280" width="170" height="60" fill="#dbeafe" rx="8"/>
+  <rect x="540" y="360" width="170" height="60" fill="#f0fdf4" rx="8"/>
+  
+  <!-- Phone 3: Progress -->
+  <rect x="830" y="140" width="190" height="40" fill="url(#fitnessGrad)" rx="8"/>
+  <text x="925" y="165" text-anchor="middle" fill="white" font-family="Arial, sans-serif" font-size="16" font-weight="bold">Progress</text>
+  
+  <!-- Chart lines -->
+  <polyline points="840,220 860,200 880,180 900,160 920,140 940,120 960,100 980,120 1000,140" fill="none" stroke="#f59e0b" stroke-width="3"/>
+  
+  <text x="600" y="680" text-anchor="middle" fill="#64748b" font-family="Arial, sans-serif" font-size="18">
+    React Native + Expo + SQLite + Redux
+  </text>
+  
+  <text x="600" y="720" text-anchor="middle" fill="#9ca3af" font-family="Arial, sans-serif" font-size="16">
+    Mobile App for iOS & Android
+  </text>
+</svg>

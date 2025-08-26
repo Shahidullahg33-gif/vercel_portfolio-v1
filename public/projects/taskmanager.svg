@@ -1,0 +1,30 @@
+<!-- Task Manager App Project Screenshot Placeholder -->
+<svg width="1200" height="800" viewBox="0 0 1200 800" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1200" height="800" fill="#f8fafc"/>
+  <rect x="0" y="0" width="1200" height="80" fill="#14b8a6"/>
+  <text x="60" y="50" fill="white" font-family="Arial, sans-serif" font-size="24" font-weight="bold">Task Manager</text>
+  
+  <!-- Kanban columns -->
+  <rect x="80" y="120" width="300" height="600" fill="#ecfdf5" rx="12"/>
+  <rect x="450" y="120" width="300" height="600" fill="#fef3c7" rx="12"/>
+  <rect x="820" y="120" width="300" height="600" fill="#dbeafe" rx="12"/>
+  
+  <!-- Column headers -->
+  <text x="230" y="160" text-anchor="middle" fill="#065f46" font-family="Arial, sans-serif" font-size="18" font-weight="bold">To Do</text>
+  <text x="600" y="160" text-anchor="middle" fill="#92400e" font-family="Arial, sans-serif" font-size="18" font-weight="bold">In Progress</text>
+  <text x="970" y="160" text-anchor="middle" fill="#1e40af" font-family="Arial, sans-serif" font-size="18" font-weight="bold">Done</text>
+  
+  <!-- Task cards -->
+  <rect x="100" y="180" width="260" height="80" fill="white" rx="8" stroke="#d1d5db"/>
+  <rect x="100" y="280" width="260" height="80" fill="white" rx="8" stroke="#d1d5db"/>
+  
+  <rect x="470" y="180" width="260" height="80" fill="white" rx="8" stroke="#d1d5db"/>
+  
+  <rect x="840" y="180" width="260" height="80" fill="white" rx="8" stroke="#d1d5db"/>
+  <rect x="840" y="280" width="260" height="80" fill="white" rx="8" stroke="#d1d5db"/>
+  <rect x="840" y="380" width="260" height="80" fill="white" rx="8" stroke="#d1d5db"/>
+  
+  <text x="600" y="760" text-anchor="middle" fill="#64748b" font-family="Arial, sans-serif" font-size="18">
+    React + Firebase + Drag & Drop
+  </text>
+</svg>

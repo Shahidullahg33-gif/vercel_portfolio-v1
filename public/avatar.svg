@@ -1,0 +1,9 @@
+<!-- Placeholder avatar image - Replace with your actual photo -->
+<svg width="400" height="400" viewBox="0 0 400 400" xmlns="http://www.w3.org/2000/svg">
+  <rect width="400" height="400" fill="#e2e8f0"/>
+  <circle cx="200" cy="160" r="50" fill="#94a3b8"/>
+  <circle cx="200" cy="320" r="100" fill="#94a3b8"/>
+  <text x="200" y="380" text-anchor="middle" fill="#475569" font-family="Arial, sans-serif" font-size="16">
+    Add your photo here
+  </text>
+</svg>
