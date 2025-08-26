@@ -18,8 +18,10 @@ type Theme = typeof themes[number]
 
 function ThemeToggle() {
   const [currentTheme, setCurrentTheme] = useState<Theme>('light')
+  const [mounted, setMounted] = useState(false)
 
   useEffect(() => {
+    setMounted(true)
     const saved = localStorage.getItem('pref-theme-v2') as Theme
     if (saved && themes.includes(saved)) {
       setCurrentTheme(saved)
@@ -38,28 +40,32 @@ function ThemeToggle() {
     localStorage.setItem('pref-theme-v2', nextTheme)
   }
 
+  if (!mounted) {
+    return null
+  }
+
   return (
-    <div className="hidden md:block mr-6">
+    <div className="hidden md:block fixed top-4 right-4 z-[60]">
       <button
         onClick={switchTheme}
-        className="relative overflow-hidden bg-gradient-to-r from-purple-500 via-pink-500 to-blue-500 p-0.5 rounded-full transition-all duration-300 hover:scale-105"
+        className="relative overflow-hidden bg-gradient-to-r from-purple-500 via-pink-500 to-blue-500 p-0.5 rounded-full transition-all duration-300 hover:scale-105 shadow-lg"
         aria-label={`Current theme: ${currentTheme}. Click to switch themes.`}
       >
-        <div className="relative bg-black/80 backdrop-blur-sm rounded-full px-6 py-2 flex items-center gap-2">
+        <div className="relative bg-black/90 backdrop-blur-sm rounded-full px-3 py-1 flex items-center gap-2">
           {/* Animated indicator */}
           <div 
-            className="absolute left-1 top-1 bottom-1 w-8 bg-gradient-to-r from-pink-500 to-purple-500 rounded-full transition-transform duration-500 ease-out"
+            className="absolute left-0.5 top-0.5 bottom-0.5 w-5 bg-gradient-to-r from-pink-500 to-purple-500 rounded-full transition-transform duration-500 ease-out"
             style={{
-              transform: `translateX(${themes.indexOf(currentTheme) * 24}px)`
+              transform: `translateX(${themes.indexOf(currentTheme) * 16}px)`
             }}
           />
           
           {/* Theme labels */}
-          <div className="relative z-10 flex items-center gap-6 text-xs font-medium">
+          <div className="relative z-10 flex items-center gap-2 text-xs font-medium">
             {themes.map((theme) => (
               <span
                 key={theme}
-                className={`transition-colors duration-300 capitalize ${
+                className={`transition-colors duration-300 capitalize px-0.5 ${
                   currentTheme === theme ? 'text-white' : 'text-gray-400'
                 }`}
               >
@@ -87,6 +93,9 @@ export default function Navigation() {
 
   return (
   <nav className={`site-nav fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${scrolled ? 'nav-scrolled' : ''}`}>
+      {/* Theme Toggle - Positioned in top right */}
+      <ThemeToggle />
+      
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
@@ -96,9 +105,6 @@ export default function Navigation() {
           >
             {personalInfo.name.split(' ').map(name => name[0]).join('')}
           </Link>
-
-          {/* Theme Switcher */}
-          <ThemeToggle />
 
           {/* Desktop Navigation */}
           <div className="hidden md:block">
